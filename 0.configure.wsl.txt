@@ -1,2 +1,21 @@
 ## get admin privilege
 1. run "make me admin" and set the expiring time as long as possible if there is any
+
+## install & configure wsl2
+search and open "terminal" from start menu
+run "wsl -install" and reboot the computer once finished
+search and open "ubuntu on windows" from start menu
+follow the instruction to setup username and password
+run "sudo apt update; sudo dist-upgrade" and type "y" when any confirmation pops up
+run "sudo do-release-upgrade -d" and type "y" when any confirmations pop up
+when finished, ignore the error message "Failed to connect to bus: Host is down"
+close the current ubuntu terminal and wait for 10 seconds for ubuntu to shutdown
+search and open "ubuntu on windows" from start menu again
+run "cat /etc/os-release" to check if it shows VERSION_ID="22.04"
+rigth-click on the title bar of the opened ubuntu terminal and choose "properties"
+under "edit options" section, check "use ctrl+shift+c/v as copy/paste" option and press OK
+close the current ubuntu terminal
+type "\\wsl$\ubuntu\home\" in the address bar of windows explorer to open that location
+copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one
+
+## 

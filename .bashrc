@@ -3,11 +3,14 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -20,17 +23,21 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -77,10 +84,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -94,19 +108,13 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#    . /etc/bash_completion
-#fi
-
-# remove duplicate colons
-export PATH=`ls -d /usr/local/*/bin/ | tr '[[:space:]]' ':' | sed -r -e 's/\/\:/\:/g' -e 's/\:$//'``echo :$PATH | sed 's/\:$//'`
-export LD_LIBRARY_PATH=`ls -d /usr/local/*/lib/ | tr '[[:space:]]' ':' | sed -r -e 's/\/\:/\:/g' -e 's/\:$//'``echo :$LD_LIBRARY_PATH | sed 's/\:$//'`
-export MANPATH=:`ls -d /usr/local/*/share/man/ | tr '[[:space:]]' ':' | sed -r -e 's/\/\:/\:/g' -e 's/\:$//'``echo :$MANPATH | sed 's/\:$//'`
-
-# remove duplicate items
-export PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
-export LD_LIBRARY_PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{LD_LIBRARY_PATH}))')"
-export MANPATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{MANPATH}))')"
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 export CUDA_CACHE_DISABLE=1 # needed by CUDA
 export CUDA_VISIBLE_DEVICES=0 # needed by CUDA
@@ -116,11 +124,3 @@ export PERLLIB=. # needed by new Perl for backward compatibility (warning: this 
 export CONFIG_SHELL=/bin/bash # needed by autoconf & configure, etc., in addition with (and set to be the same as) chsh-defined $SHELL
 export MAKE_SHELL=/bin/bash # might be needed by make, etc., in addition with (and set to be the same as) chsh-defined $SHELL
 export SHELL=/bin/bash # double secure the chsh-defined $SHELL
-
-alias python='python -i'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval "$('/c/ProgramData/Miniconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
-export PATH="/c/ProgramData/Miniconda3/Scripts:/c/ProgramData/Miniconda3:$PATH"
-# <<< conda initialize <<<
