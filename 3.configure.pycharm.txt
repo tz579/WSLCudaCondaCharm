@@ -1,10 +1,19 @@
 ## get admin privilege
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
-## install & configure pycharm
-1. download "jetbrains-toolbox" from https://www.jetbrains.com/toolbox-app/
-2. run "jetbrains-toolbox" and follow the instruction to install pycharm-community
-3. search and open "pycharm-community" from start menu
+## remove pycharm-community & install pycharm-professional
+1. from system tray, locate and click "jetbrains toolbox"
+2. under the "tools->installed" section, locate "pycharm-community"
+3. click the "..." button to the right of "pycharm-community" and select "uninstall"
+4. follow the instruction to uninstall pycharm-community
+5. under the "tools->available" section, locate "pycharm-professional"
+6. click "install" and follow the instruction to install pycharm-professional
+7. search and open "pycharm-professional" from start menu
+8. in the "license" popup window, choose "activate pycharm" and "get license from jb account"
+9. press "log in to jetbrains account" and follow the instruction to login through web browser
+10. return to the "license" popup window, press "activate"
+
+## configure pycharm-professional
 4. press "create new project" and select "previously configured interpreter"
 5. press "..." button on the right side of "previously configured interpreter"
 6. select "conda environment" on the left side
