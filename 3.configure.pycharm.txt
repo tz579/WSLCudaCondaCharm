@@ -1,10 +1,21 @@
-## update conda python environment
-1. cd to the dir where env.yaml exists
-2. run "conda update --all"
-3. run "conda env update --file env.yaml"
-4. run "conda clean --all -yf" and then run "pip cache purge" to cleanup temp files
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
 
-## update pycharm project previously created
+## install & configure pycharm
+1. download "jetbrains-toolbox" from https://www.jetbrains.com/toolbox-app/
+2. run "jetbrains-toolbox" and follow the instruction to install pycharm-community
+3. search and open "pycharm-community" from start menu
+4. press "create new project" and select "previously configured interpreter"
+5. press "..." button on the right side of "previously configured interpreter"
+6. select "conda environment" on the left side
+7. press "..." button on the right side of "interpreter" and press "show hidden files and folders" on the opened window
+8. find "C:\ProgramData\Miniconda3\python.exe" and press OK
+9. press "..." button on the right side of "conda executable" and press "show hidden files and folders" on the opened window
+10. find "C:\ProgramData\Miniconda3\scripts\conda.exe" and press OK
+11. select "make available for all projects" and press OK
+12. press OK again to finally open the new project
+
+## test current configurations
 1. copy demo.tts.py into the project previously created
 2. search and open "pycharm-community" from start menu
 3. open the project previously created
