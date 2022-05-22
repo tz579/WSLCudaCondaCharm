@@ -1,3 +1,11 @@
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_ops_infer.so.8 /opt/conda/lib/libcudnn_ops_infer.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn.so.8 /opt/conda/lib/libcudnn.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_adv_train.so.8 /opt/conda/lib/libcudnn_adv_train.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_train.so.8 /opt/conda/lib/libcudnn_cnn_train.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_adv_infer.so.8 /opt/conda/lib/libcudnn_adv_infer.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_ops_train.so.8 /opt/conda/lib/libcudnn_ops_train.so.8
+ln -s /opt/conda/lib/python3.10/site-packages/torch/lib/libcudnn_cnn_infer.so.8 /opt/conda/lib/libcudnn_cnn_infer.so.8
+
 mamba uninstall llvmlite numba resampy librosa
 pip uninstall llvmlite numba resampy librosa
 pip uninstall llvmlite numba resampy librosa
