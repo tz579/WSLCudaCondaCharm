@@ -2,7 +2,20 @@
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
 ## install & configure conda
-1. download "Miniconda3 Windows 64-bit" from https://docs.conda.io/en/latest/miniconda.html
-2. run "Miniconda3 Windows 64-bit" and choose "install for all users" when ask
-3. search and right click "anaconda prompt" from start menu, press "run as Administrator"
-4. run "conda config --set channel_priority strict"
+search and open "ubuntu on windows" from start menu
+run "mkdir -p /home/Applications/conda"
+close the current ubuntu terminal and wait for 10 seconds for ubuntu to shutdown
+type "\\wsl$\ubuntu\home\Applications\conda" in the address bar of windows explorer to open that location
+copy "initial.sh" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+copy "env.yaml" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+copy all "install.sh.*" files from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
+run "bash initialsetups.sh"
+run "wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+run "bash Miniconda3-latest-Linux-x86_64.sh" and follow the instructions
+when showing "Miniconda3 will now be installed into this location:", type "/opt/conda" to replace the default
+when showing "Do you wish the installer to initialize Miniconda3 ", type "yes" to initialize
+when finished, close the current ubuntu terminal
+search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
+run "bash install.sh.conda" and type "y" when any confirmation pops up
+run "mamba env update --file env.yaml"

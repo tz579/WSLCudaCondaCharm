@@ -3,22 +3,6 @@
 
 ## update conda configurations
 1. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
-2. run "conda list | awk '/pypi/ {print $1}' | grep -Pv llvmlite | xargs pip uninstall -y" # win conda has no separate pip pkg dirs for each py version
-3. run "conda uninstall numba librosa" and type "y" when any confirmation pops up # no sigpy conda pkgs
-4. run "pip cache purge" and then run "conda clean --all -yf"
-5. run "conda config --add channels conda-forge"
-6. run "conda config --append channels nvidia"
-7. run "conda config --append channels intel"
-8. run "conda config --set channel_priority strict"
-9. run "conda update --all" and type "y" when any confirmation pops up
-10. run "conda install mamba" and type "y" when any confirmation pops up
-11. run "mamba install python=3.10" and type "y" when any confirmation pops up
-12. run "mamba update --all" and type "y" when any confirmation pops up
-13. run "mamba env update --file env.yaml"
-14. run "mamba clean --all -yf" and then run "pip cache purge"
-
-## update conda configurations
-1. right-click on the blank area of current folder that contains this instruction and choose "msys2 bash here"
 2. run "pacman -S git" and type "y" when any confirmation pops up
 3. run "mamba uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up
 4. run "pip uninstall llvmlite numba resampy librosa" and type "y" when any confirmation pops up

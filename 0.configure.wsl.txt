@@ -10,7 +10,7 @@ run "sudo apt update; sudo dist-upgrade" and type "y" when any confirmation pops
 run "sudo do-release-upgrade -d" and type "y" when any confirmations pop up
 when finished, ignore the error message "Failed to connect to bus: Host is down"
 close the current ubuntu terminal and wait for 10 seconds for ubuntu to shutdown
-search and open "ubuntu on windows" from start menu again
+search and open "ubuntu on windows" from start menu
 run "cat /etc/os-release" to check if it shows VERSION_ID="22.04"
 rigth-click on the title bar of the opened ubuntu terminal and choose "properties"
 under "edit options" section, check "use ctrl+shift+c/v as copy/paste" option and press OK
@@ -18,4 +18,3 @@ close the current ubuntu terminal
 type "\\wsl$\ubuntu\home\" in the address bar of windows explorer to open that location
 copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one
 
-## 
