@@ -1,4 +1,5 @@
 conda config --add channels conda-forge # newest pkgs still needed even if we're not using conda-cuda
+conda config --add channels pytorch # newest pkgs still needed even if we're not using conda-cuda
 conda config --append channels nvidia
 conda config --append channels intel
 conda config --append channels numba

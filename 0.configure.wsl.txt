@@ -1,6 +1,21 @@
 ## get admin privilege
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
+## upgrade nvidia driver configurations
+go to "www.nvidia.com/Download/index.aspx" in web browser
+choose "geforce" for product type
+choose "geforce 16 series" for product series
+choose "geforce 1660 ti" for product
+choose "windows 10 64 bit" for operation system
+choose "game ready driver" for download type ("studio driver" is older)
+press "search" and then press "download" in the redirected webpage
+press "download" again in the further redirected webpage to download the installer
+right-click "512.77-notebook-win10-win11-64bit-international-dch-whql.exe" and choose "run as administrator"
+follow the instruction and select "custom install" when popped up for "installation options"
+press "next" and select "perform a clean installation" in the following step
+press "next" and follow the instruction to finish the installation
+when finished, reboot the computer
+
 ## install & configure wsl2
 search and open "terminal" from start menu
 run "wsl -install" and reboot the computer once finished

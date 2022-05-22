@@ -1,0 +1,5 @@
+mamba uninstall llvmlite numba resampy librosa
+pip uninstall llvmlite numba resampy librosa
+pip uninstall llvmlite numba resampy librosa
+mamba clean --all -yf
+pip cache purge
