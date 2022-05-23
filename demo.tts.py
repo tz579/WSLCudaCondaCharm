@@ -1,7 +1,7 @@
 # https://pytorch.org/tutorials/intermediate/text_to_speech_with_torchaudio.html
 
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK']='True' # for windows only
 
 import torch
 import torchaudio
@@ -31,8 +31,8 @@ with torch.inference_mode():
 print(processed)
 print(lengths)
 print([processor.tokens[i] for i in processed[0, :lengths[0]]])
-plt.imshow(spec[0].cpu().detach())
-plt.show()
+#plt.imshow(spec[0].cpu().detach())
+#plt.show()
 
 
 waveglow = torch.hub.load('NVIDIA/DeepLearningExamples:torchhub', 'nvidia_waveglow', model_math='fp32', force_reload=False)

@@ -118,9 +118,25 @@ fi
 
 export CUDA_CACHE_DISABLE=1 # needed by CUDA
 export CUDA_VISIBLE_DEVICES=0 # needed by CUDA
-# export CUDA_LAUNCH_BLOCKING=1 # needed by CUDA
+export CUDA_LAUNCH_BLOCKING=1 # needed by CUDA
 export ACML_FMA=0 # needed by ACML for bug-fixing
 export PERLLIB=. # needed by new Perl for backward compatibility (warning: this will pre-pend "." into @INC, different with old Perl version where "." was appended into @INC)
 export CONFIG_SHELL=/bin/bash # needed by autoconf & configure, etc., in addition with (and set to be the same as) chsh-defined $SHELL
 export MAKE_SHELL=/bin/bash # might be needed by make, etc., in addition with (and set to be the same as) chsh-defined $SHELL
 export SHELL=/bin/bash # double secure the chsh-defined $SHELL
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/conda/etc/profile.d/conda.sh" ]; then
+        . "/opt/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
