@@ -2,34 +2,33 @@
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
 ## upgrade nvidia driver configurations
-go to "www.nvidia.com/Download/index.aspx" in web browser
-choose "geforce" for product type
-choose "geforce 16 series" for product series
-choose "geforce 1660 ti" for product
-choose "windows 10 64 bit" for operation system
-choose "game ready driver" for download type ("studio driver" is older)
-press "search" and then press "download" in the redirected webpage
-press "download" again in the further redirected webpage to download the installer
-right-click "512.77-notebook-win10-win11-64bit-international-dch-whql.exe" and choose "run as administrator"
-follow the instruction and select "custom install" when popped up for "installation options"
-press "next" and select "perform a clean installation" in the following step
-press "next" and follow the instruction to finish the installation
-when finished, reboot the computer
+1. go to "www.nvidia.com/Download/index.aspx" in web browser
+2. choose "geforce" for product type
+3. choose "geforce 16 series" for product series
+4. choose "geforce 1660 ti" for product
+5. choose "windows 10 64 bit" for operation system
+6. choose "game ready driver" for download type ("studio driver" is older)
+7. press "search" and then press "download" in the redirected webpage
+8. press "download" again in the further redirected webpage to download the installer
+9. right-click "512.77-notebook-win10-win11-64bit-international-dch-whql.exe" and choose "run as administrator"
+10. follow the instruction and select "custom install" when popped up for "installation options"
+11. press "next" and select "perform a clean installation" in the following step
+12. press "next" and follow the instruction to finish the installation
+13. when finished, reboot the computer
 
 ## install & configure wsl2
-search and open "terminal" from start menu
-run "wsl -install" and reboot the computer once finished
-search and open "ubuntu on windows" from start menu
-follow the instruction to setup username and password
-run "sudo apt update; sudo dist-upgrade" and type "y" when any confirmation pops up
-run "sudo do-release-upgrade -d" and type "y" when any confirmations pop up
-when finished, ignore the error message "Failed to connect to bus: Host is down"
-close the current ubuntu terminal and wait for 10 seconds for ubuntu to shutdown
-search and open "ubuntu on windows" from start menu
-run "cat /etc/os-release" to check if it shows VERSION_ID="22.04"
-rigth-click on the title bar of the opened ubuntu terminal and choose "properties"
-under "edit options" section, check "use ctrl+shift+c/v as copy/paste" option and press OK
-close the current ubuntu terminal
-type "\\wsl$\ubuntu\home\" in the address bar of windows explorer to open that location
-copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one
-
+1. search and right click "terminal" from start menu and click "run as administrator"
+2. run "wsl --install -d ubuntu" and reboot the computer once finished
+3. search and open "ubuntu on windows" from start menu
+4. follow the instruction inside the popped-up terminal to setup username and password
+5. run "sudo apt update; sudo apt dist-upgrade" and type "y" when any confirmation pops up
+6. run "sudo do-release-upgrade -d" and type "y" when any confirmations pop up
+7. when finished, ignore the error message "Failed to connect to bus: Host is down"
+8. close the current ubuntu terminal and wait for 10 seconds for ubuntu to shutdown
+9. search and open "ubuntu on windows" from start menu
+10. run "cat /etc/os-release" to check if it shows VERSION_ID="22.04"
+11. rigth-click on the title bar of the opened ubuntu terminal and choose "properties"
+12. under "edit options" section, check "use ctrl+shift+c/v as copy/paste" option and press OK
+13. close the current ubuntu terminal
+14. type "\\wsl$\ubuntu\home\" in the address bar of windows explorer to open that location
+15. copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one

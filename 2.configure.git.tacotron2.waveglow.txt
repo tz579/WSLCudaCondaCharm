@@ -2,13 +2,13 @@
 1. run "make me admin" and set the expiring time as long as possible if there is any
 
 ## test current configurations
-search and open "ubuntu on windows" from start menu
-run "mkdir -p Work" and then run "sudo mv Work /home/"
-run "cd /home/Work"
-run "git clone https://github.com/tz579/LJ_tacotron2.git"
-run "cd LJ_tacotron2"
-run "nohup bash scripts.1epoch.sh > scripts.1epoch.log &"
-run "tail -f scripts.1epoch.log" to monitor the output
-press "ctrl+x" whenever you want to stop monitoring the output
-re-run step 7 whenever you want to monitor the output again
-when everything is finished, go to output/ in windows explorer to check results
+1. search and open "ubuntu on windows" from start menu
+2. run "mkdir -p Work" and then run "sudo mv Work /home/"
+3. run "cd /home/Work"
+4. run "git clone https://github.com/tz579/LJ_tacotron2.git"
+5. run "cd LJ_tacotron2"
+6. run "nohup bash scripts.1epoch.sh > scripts.1epoch.log &"
+7. run "tail -f scripts.1epoch.log" to monitor the output
+8. press "ctrl+x" whenever you want to stop monitoring the output
+9. re-run step 7 whenever you want to monitor the output again
+10. when everything is finished, go to output/ in windows explorer to check results

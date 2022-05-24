@@ -21,13 +21,12 @@
 4. copy "demo.tts.py" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Work\Demo_tts"
 5. if exist, remove the potentially corrupted "\\wsl$\ubuntu\home\tz579\.cache\torch\checkpoints" dir
 6. search and open "pycharm professional" from start menu
-7. press "create new project" and then press "python interpreter" to expand the drop-down menu
+7. press "new project" and then press "python interpreter" to expand the drop-down menu
 8. select "previously configured interpreter"
 9. press "..." button on the right side of "previously configured interpreter"
 10. select "wsl" on the left side of the popped-up window
-11. press "..." button on the right side of "interpreter"
-12. find "/opt/conda/bin/python3"
-13. press OK and press OK again to close the two pop-up windows
-14. from the "location" section on the top area of the main window press "browse" button on the right side
-15. select "\\wsl\ubuntu\home\Work\Demo_tts" and press OK
-16. press "create" and then press "create from existing sources"
+11. type "/opt/conda/bin/python3" for "python interpreter path"
+12. press OK to close the pop-up window
+13. type "\\wsl$\ubuntu/home/Work/Demo_tts" for "location" section on the top area of the main window
+14. uncheck "create main.py welcome script" option on the bottom of the window if it is checked
+15. press "create" and then press "create from existing sources"
