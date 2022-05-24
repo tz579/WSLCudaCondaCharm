@@ -12,15 +12,15 @@
 8. in the "license" popup window, choose "activate pycharm" and "get license from jb account"
 9. press "log in to jetbrains account" and follow the instruction to login through web browser
 10. return to the "license" popup window, press "activate"
-11. close pycharm professional window
+11. close pycharm-professional window
 
 ## configure and test pycharm-professional
 1. type "\\wsl$\ubuntu\home\Work" in the address bar of windows explorer to open that location
 2. right click on the blank area of windows explorer and select "new->folder"
 3. create a foldder named "Demo_tts"
 4. copy "demo.tts.py" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Work\Demo_tts"
-5. if exist, remove the potentially corrupted "\\wsl$\ubuntu\home\tz579\.cache\torch\checkpoints" dir
-6. search and open "pycharm professional" from start menu
+5. if exist, remove the potentially corrupted "\\wsl$\ubuntu\home\<your username>\.cache\torch\checkpoints" dir
+6. search and open "pycharm-professional" from start menu
 7. press "new project" and then press "python interpreter" to expand the drop-down menu
 8. select "previously configured interpreter"
 9. press "..." button on the right side of "previously configured interpreter"
