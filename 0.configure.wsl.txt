@@ -32,3 +32,5 @@
 13. close the current ubuntu terminal
 14. type "\\wsl$\ubuntu\home\" in the address bar of windows explorer to open that location
 15. copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one
+16. search and open "ubuntu on windows" from start menu
+17. run "sudo chown $USER:$USER .bashrc"

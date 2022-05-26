@@ -10,12 +10,13 @@
 6. copy "env.yaml" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
 7. copy all "install.sh.*" files from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
 8. search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
-9. run "bash initialsetups.sh"
-10. run "wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
-11. run "bash Miniconda3-latest-Linux-x86_64.sh" and follow the instructions
-12. when showing "Miniconda3 will now be installed into this location:", type "/opt/conda" to replace the default
-13. when showing "Do you wish the installer to initialize Miniconda3 ", type "yes" to initialize
-14. when finished, close the current ubuntu terminal
+9. run "sudo chown $USER:$USER *"
+10. run "bash initialsetups.sh"
+11. run "wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+12. run "bash Miniconda3-latest-Linux-x86_64.sh" and follow the instructions
+13. when showing "Miniconda3 will now be installed into this location:", type "/opt/conda" to replace the default
+14. when showing "Do you wish the installer to initialize Miniconda3 ", type "yes" to initialize
+15. when finished, close the current ubuntu terminal
 
 ## update conda configurations
 1. search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
