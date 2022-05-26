@@ -34,3 +34,4 @@
 15. copy ".bashrc" from the dir that contains this instruction into "\\wsl$\ubuntu\home\<your-username>\" to replace the pre-existed one
 16. search and open "ubuntu on windows" from start menu
 17. run "sudo chown $USER:$USER .bashrc"
+18. run "sudo chmod 775 .bashrc"
