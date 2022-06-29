@@ -24,9 +24,8 @@
 2. run "bash install.sh.conda" and type "y" when any confirmation pops up
 3. run "mamba env update --file env.yaml"
 4. run "bash install.sh.conda.additional" and ignore any error message
-5. run "bash install.sh.conda.llvmlite"
-6. run "bash install.sh.conda.numba"
-7. run "bash install.sh.conda.resampy"
-8. run "bash install.sh.conda.librosa"
-9. run "bash install.sh.conda.dllogger"
-10. run "bash install.sh.conda.apex"
+5. run "bash install.sh.conda.numba"
+6. run "bash install.sh.conda.resampy"
+7. run "bash install.sh.conda.librosa"
+8. run "bash install.sh.conda.dllogger"
+9. run "bash install.sh.conda.apex"
