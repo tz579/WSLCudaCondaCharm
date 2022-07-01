@@ -1,6 +1,7 @@
-mamba uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`
-pip uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`
-pip uninstall `mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`
+llvmpkglist=`mamba list | grep llvm | awk '{print $1}' | grep -Pv "(openmp|libllvm13)" | tr '\n' ' '`
+mamba uninstall "${llvmpkglist}"
+pip uninstall "${llvmpkglist}"
+pip uninstall "${llvmpkglist}"
 
 mamba uninstall llvmlite numba resampy librosa
 pip uninstall llvmlite numba resampy librosa
