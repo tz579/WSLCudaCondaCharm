@@ -1,0 +1,20 @@
+## get admin privilege
+1. run "make me admin" and set the expiring time as long as possible if there is any
+
+## reconfigure conda
+1. type "\\wsl$\ubuntu\home\Applications\conda" in the address bar of windows explorer to open that location
+2. copy "reconfigure.sh.conda.20220701" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+3. copy "install.sh.conda" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+4. copy "install.sh.conda.additional" files from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+5. copy "install.sh.conda.numba" files from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+6. copy "env.yaml" from the dir that contains this instruction into "\\wsl$\ubuntu\home\Applications\conda\"
+7. search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
+8. run "bash reconfigure.sh.conda.20220701" and type "y" when any confirmation pops up
+9. run "bash install.sh.conda.additional" and ignore any error message and type "y" when any confirmation pops up
+10. run "mamba update --all" and type "y" when any confirmation pops up
+11. run "mamba env update --file env.yaml"
+12. run "bash install.sh.conda.numba"
+13. run "bash install.sh.conda.resampy"
+14. run "bash install.sh.conda.librosa"
+15. run "bash install.sh.conda.dllogger"
+16. run "bash install.sh.conda.apex"
