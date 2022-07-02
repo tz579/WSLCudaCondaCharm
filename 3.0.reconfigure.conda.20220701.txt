@@ -11,8 +11,8 @@
 7. search and open "ubuntu on windows" from start menu and then run "cd /home/Applications/conda"
 8. run "bash reconfigure.sh.conda.20220701" and type "y" when any confirmation pops up
 9. run "bash install.sh.conda.additional" and ignore any error message and type "y" when any confirmation pops up
-10. run "mamba update --all" and type "y" when any confirmation pops up
-11. run "mamba env update --file env.yaml"
+10. run "mamba env update --file env.yaml"
+11. run "mamba update --all" and type "y" when any confirmation pops up
 12. run "bash install.sh.conda.numba"
 13. run "bash install.sh.conda.resampy"
 14. run "bash install.sh.conda.librosa"
