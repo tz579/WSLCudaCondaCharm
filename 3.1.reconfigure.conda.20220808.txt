@@ -11,3 +11,4 @@
 9. run "bash install.sh.conda.additional" and ignore any error message and type "y" when any confirmation pops up
 10. run "mamba env update --file env.yaml"
 11. run "mamba update --all" and type "y" when any confirmation pops up
+12. visit https://github.com/resemble-ai/Resemblyzer#code-example for demonstration (resemblyzer has already been set up)

@@ -1,11 +1,6 @@
-mamba uninstall libllvm11 llvm-tools llvmdev llvmlite
-pip uninstall libllvm11 llvm-tools llvmdev llvmlite
-pip uninstall libllvm11 llvm-tools llvmdev llvmlite
+mamba uninstall libllvm11 llvm-tools llvmdev
+pip uninstall libllvm11 llvm-tools llvmdev
+pip uninstall libllvm11 llvm-tools llvmdev
 
-mamba uninstall numba resampy librosa
-pip uninstall numba resampy librosa
-pip uninstall numba resampy librosa
-
-mamba install -c numba llvmlite
 mamba clean --all -yf
 pip cache purge
