@@ -1,9 +1,8 @@
 conda config --add channels conda-forge # newest pkgs still needed even if we're not using conda-cuda
-conda config --add channels pytorch # newest pkgs still needed even if we're not using conda-cuda
+conda config --add channels pytorch
+conda config --add channels numba
 conda config --append channels nvidia
 conda config --append channels intel
 conda config --set channel_priority strict # "append": to bottom priority; add: to top priority
 conda update --all
 conda install mamba
-mamba install python=3.10
-mamba update --all
